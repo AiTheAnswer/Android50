@@ -9,6 +9,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
 import android.widget.Button
 import com.allen.recyclerviewdemo.adapter.RecyclerViewAdapter
+import com.allen.recyclerviewdemo.divider.DividerItemDecoration
 
 class RecyclerViewActivity : AppCompatActivity(), View.OnClickListener {
     private var mBtnAdd: Button? = null

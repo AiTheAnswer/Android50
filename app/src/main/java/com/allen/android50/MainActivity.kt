@@ -5,10 +5,12 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.allen.cardview.CardViewActivity
 import com.allen.recyclerviewdemo.RecyclerViewActivity
 
-class MainActivity : AppCompatActivity(),View.OnClickListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var mBtnRecyclerView: Button? = null
+    private var mBtnCardView: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,10 +18,16 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         initView()
         initListener()
     }
+
     override fun onClick(view: View?) {
-        when (view?.id){
-           R.id.recycler_view -> toRecyclerView()
+        when (view?.id) {
+            R.id.recycler_view -> toRecyclerView()
+            R.id.card_view -> toCardView()
         }
+    }
+
+    private fun toCardView() {
+        startActivity(Intent(this, CardViewActivity::class.java))
     }
 
     private fun toRecyclerView() {
@@ -28,9 +36,11 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
 
     private fun initListener() {
         mBtnRecyclerView?.setOnClickListener(this)
+        mBtnCardView?.setOnClickListener(this)
     }
 
     private fun initView() {
         mBtnRecyclerView = findViewById(R.id.recycler_view)
+        mBtnCardView = findViewById(R.id.card_view)
     }
 }

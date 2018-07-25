@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Android5.0新特性</string>
     <string name="recycler_view">RecyclerView</string>
+    <string name="card_view">CardView</string>
 </resources>

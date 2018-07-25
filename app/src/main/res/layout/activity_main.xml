@@ -10,4 +10,10 @@
         android:layout_height="wrap_content"
         android:text="@string/recycler_view" />
 
+    <Button
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/recycler_view" />
+
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.allen.recyclerviewdemo
+package com.allen.recyclerviewdemo.divider
 
 import android.content.Context
 import android.graphics.Canvas
