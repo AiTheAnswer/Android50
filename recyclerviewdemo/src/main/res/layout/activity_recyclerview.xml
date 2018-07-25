@@ -15,22 +15,36 @@
             android:id="@+id/btn_add"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/add_item"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="@string/add_item" />
 
         <Button
             android:id="@+id/btn_remove"
             android:layout_width="0dp"
-            android:text="@string/remove_item"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="@string/remove_item" />
 
         <Button
-            android:id="@+id/btn_orientation"
-            android:text="@string/orientation"
+            android:id="@+id/btn_list_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="@string/list_view" />
+
+        <Button
+            android:id="@+id/btn_grid_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/grid_view" />
+
+        <Button
+            android:id="@+id/btn_water_fall_flow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/water_fall_flow" />
 
     </LinearLayout>
 

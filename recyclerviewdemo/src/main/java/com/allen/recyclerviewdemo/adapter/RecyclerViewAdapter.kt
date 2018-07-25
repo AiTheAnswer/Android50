@@ -6,9 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.allen.recyclerviewdemo.R
 
-class RecyclerViewAdapter(var mData: List<String>, var mContext: Context) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+class RecyclerViewAdapter(var mData: ArrayList<String>, var mContext: Context) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(LayoutInflater.from(mContext).inflate(R.layout.item_recyclerview, null))
     }
@@ -19,6 +22,20 @@ class RecyclerViewAdapter(var mData: List<String>, var mContext: Context) : Recy
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.tv.text = mData[position]
+    }
+
+    fun addItem() {
+        mData.add(1, "2")
+        notifyDataSetChanged()
+    }
+
+    fun removeItem() {
+        if (mData.size > 0) {
+            mData.removeAt(0)
+            notifyDataSetChanged()
+        } else {
+            Toast.makeText(mContext, "无数据了，不能删除", Toast.LENGTH_SHORT).show()
+        }
     }
 
 

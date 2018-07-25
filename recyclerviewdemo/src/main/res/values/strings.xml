@@ -2,5 +2,7 @@
     <string name="app_name">RecyclerViewDemo</string>
     <string name="add_item">添加元素</string>
     <string name="remove_item">移除元素</string>
-    <string name="orientation">转换方向</string>
+    <string name="list_view">ListView</string>
+    <string name="grid_view">GridView</string>
+    <string name="water_fall_flow">瀑布流</string>
 </resources>
