@@ -6,11 +6,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import com.allen.cardview.CardViewActivity
+import com.allen.notificationdemo.NotificationActivity
 import com.allen.recyclerviewdemo.RecyclerViewActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var mBtnRecyclerView: Button? = null
     private var mBtnCardView: Button? = null
+    private var mBtnNotification: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +25,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (view?.id) {
             R.id.recycler_view -> toRecyclerView()
             R.id.card_view -> toCardView()
+            R.id.notification -> toNotification()
         }
+    }
+
+    private fun toNotification() {
+        startActivity(Intent(this, NotificationActivity::class.java))
     }
 
     private fun toCardView() {
@@ -37,10 +44,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun initListener() {
         mBtnRecyclerView?.setOnClickListener(this)
         mBtnCardView?.setOnClickListener(this)
+        mBtnNotification?.setOnClickListener(this)
     }
 
     private fun initView() {
         mBtnRecyclerView = findViewById(R.id.recycler_view)
         mBtnCardView = findViewById(R.id.card_view)
+        mBtnNotification = findViewById(R.id.notification)
     }
 }

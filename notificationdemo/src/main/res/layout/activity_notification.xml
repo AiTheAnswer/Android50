@@ -5,21 +5,23 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/recycler_view"
+        android:id="@+id/btn_common_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/recycler_view" />
+        android:text="@string/common_notification"
+        />
+    <Button
+        android:id="@+id/btn_fold_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/fold_notification"
+        />
 
     <Button
-        android:id="@+id/card_view"
+        android:id="@+id/btn_hang_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/card_view" />
-
-    <Button
-        android:id="@+id/notification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/notification" />
+        android:text="@string/hang_notification"
+        />
 
 </LinearLayout>
