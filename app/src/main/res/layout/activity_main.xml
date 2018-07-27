@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <include layout="@layout/my_toolbar" />
@@ -38,7 +39,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/darker_gray"
+            android:background="@android:color/white"
+            android:layout_gravity="start"
             android:orientation="vertical">
 
             <TextView
@@ -47,7 +49,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="侧滑菜单，点击收回侧滑"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/black" />
         </LinearLayout>
     </android.support.v4.widget.DrawerLayout>
 

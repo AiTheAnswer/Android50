@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.Toolbar
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import com.allen.cardview.CardViewActivity
 import com.allen.notificationdemo.NotificationActivity
 import com.allen.recyclerviewdemo.RecyclerViewActivity
@@ -26,9 +29,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         initView()
         initListener()
         setSupportActionBar(mToolbar)
-        mDrawerToggle = ActionBarDrawerToggle(this,mDrawerLayout,mToolbar,R.string.drawer_open,R.string.drawer_close)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mToolbar?.setOnMenuItemClickListener(object : android.widget.Toolbar.OnMenuItemClickListener, Toolbar.OnMenuItemClickListener {
+            override fun onMenuItemClick(item: MenuItem?): Boolean {
+                when (item?.itemId) {
+                    R.id.action_settings -> showToast("action_settings")
+                    R.id.action_share -> showToast("action_share")
+                    R.id.ab_search -> showToast("ab_search")
+
+                }
+                return true
+            }
+
+        })
+        mDrawerToggle = ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close)
         mDrawerToggle?.syncState()
         mDrawerLayout?.addDrawerListener(mDrawerToggle!!)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
     }
 
     override fun onClick(view: View?) {
